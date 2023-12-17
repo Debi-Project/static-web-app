@@ -3,7 +3,9 @@ pipeline {
 
     stages {
         stage ("CheckoutCode") {
-            git branch: 'master' , url: 'https://github.com/Debi-Project/My-Project.git'
+            steps {
+                git branch: 'master' , url: 'https://github.com/Debi-Project/My-Project.git'
+            }
         }
     }
 }
