@@ -17,5 +17,11 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
+
+        stage ('Deployment') {
+            steps {
+                deploy adapters: [tomcat9(credentialsId: 'tomcred',url: 'http://54.83.186.56:8080/')],contextPath: 'welcomeapp',war: '**/*.war'
+            }
+        }
     }
 }
