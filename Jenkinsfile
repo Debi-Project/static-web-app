@@ -7,5 +7,11 @@ pipeline {
                 git branch: "master" , url: "https://github.com/Debi-Project/My-Project.git"
             }
         }
+
+        stage ('BuildCode') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
     }
 }
