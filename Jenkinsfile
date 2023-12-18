@@ -9,7 +9,7 @@ pipeline {
         }
         stage ("Deployment") {
             steps {
-                sh 'scp -r /var/lib/jenkins/workspace/nginx Project/* ubuntu@ip-172-31-33-52:/var/www/html'
+                sh 'scp -r /var/lib/jenkins/workspace/nginx Project/* ubuntu@ip-172-31-33-52:/var/www/html/'
             }
         }
     }
