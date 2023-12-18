@@ -12,7 +12,7 @@ pipeline {
         stage ("DeployCode") {
             steps {
                 sh 'mvn clean package'
-                echo "DeployCode successed"
+                echo "Build successed"
             }
         }
 
