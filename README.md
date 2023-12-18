@@ -1,1 +1,1 @@
-# java-web-app
+# static-web-app
