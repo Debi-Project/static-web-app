@@ -15,5 +15,11 @@ pipeline {
                 echo "DeployCode successed"
             }
         }
+
+        stage ("Deployment") {
+            steps {
+                deploy adapters: [tomcat9 (credentialsId: "tomcred",url: "http://34.224.65.98:8080/")], contextPath: welcomeapp, war: **/*.war
+            }
+        }
     }
 }
