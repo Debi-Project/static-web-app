@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        mvn 'mvn3.9'
+        mvn 'maven3.9'
     }
     stages {
         stage ("CheckoutCode") {
